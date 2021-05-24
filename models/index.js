@@ -22,7 +22,12 @@ Genres.hasMany(BooksGenres)
 BooksGenres.belongsTo(Books)
 
 
-
+module.exports = {
+  Authors,
+  Books,
+  Genres,
+  BooksGenres
+}
 
 
 

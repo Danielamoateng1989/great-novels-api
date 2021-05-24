@@ -1,17 +1,19 @@
-const express = require('express');
-const app = express();
+const express = require('express')
+const app = express()
 
-app.get('/', (req, res) => {
- res.send('Hello World')
-})
+const { getAllAuthors, getAuthorById } = require('./controller/authors')
 
-
-
+app.get('/authors', getAllAuthors)
+app.get('/authors/:id', getAuthorById)
 
 
-const port  = 3000
+
+
+const port = 3000
+
 app.listen(port, () => {
-    console.log(`listening om port ${port}`)
+  // eslint-disable-next-line no-console
+  console.log(`listening om port ${port}`)
 })
 
 
