@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express = require('express')
 const app = express()
 
@@ -12,10 +13,10 @@ app.get('/genres/:id', getGenreById)
 
 
 
-const port = 3000
+const Port = 3000
 
-app.listen(port, () => {
-  console.log(`listening om port ${port}`)
+app.listen(Port, () => {
+  console.log(`listening om port ${Port}`)
 })
 
 
