@@ -1,9 +1,9 @@
 const models = require('../models')
 
 const getAllbooks = async (req, res) => {
-  const books = await models.Books.findAll({ include: [{ model: models.Books }] })
+  const novels = await models.Books.findAll()
 
-  return res.send(books)
+  return res.send(novels)
 }
 
 const getBookById = async (request, response) => { const { id } = request.params
@@ -11,8 +11,6 @@ const getBookById = async (request, response) => { const { id } = request.params
 
   return bookId ? response.send(bookId) : response.sendStatus(404)
 }
-
-
 
 
 module.exports = {
