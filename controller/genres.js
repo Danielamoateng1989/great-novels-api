@@ -13,8 +13,6 @@ const getGenreById = async (request, response) => { const { id } = request.param
 }
 
 
-
-
 module.exports = {
   getAllGenres,
   getGenreById

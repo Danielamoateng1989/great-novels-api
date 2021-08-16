@@ -5,6 +5,7 @@ const GenresModel = require('./Genres')
 const { Sequelize } = require('sequelize')
 
 
+
 const connection = new Sequelize('novels', 'damoateng', 'Dannyboy123!', {
   host: 'localhost', dialect: 'mysql'
 })
